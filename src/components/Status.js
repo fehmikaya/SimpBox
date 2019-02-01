@@ -22,9 +22,10 @@ class Status extends Component {
     }
   }
 
-
   getDataFromDb = () => {
-  
+
+    this.setState({ data: "STARTED" })
+  /*
     fetch("/api/v1/clusters/Sandbox/services/HDFS", {
       method: 'GET',
       headers: {
@@ -33,9 +34,8 @@ class Status extends Component {
     })
       .then(data => data.json())
       .then(res => this.setState({ data: res.ServiceInfo.state }));
-
+*/
   };
-
 
   render() {
     const { data } = this.state;
